@@ -1,16 +1,14 @@
 const express = require('express')
 const { query } = require('../helpers/db.js')
 
-
 const userRouter = express.Router()
 
+
 userRouter.post("/login",async(req,res) => {
- 
     try{
-        const sql ="select * from account where email=$1"
-        const result = await query(sql,[req.body.email])
+        const sql ="select * from account where username=$1"
+        const result = await query(sql,[req.body.username])
         if(result.rowCount === 1){
-           
             if (result. rows[0].password === req.body.password) {
                 res. status (200).json (result. rows [0])
                 } else {
@@ -26,6 +24,7 @@ userRouter.post("/login",async(req,res) => {
                 res.status(500).json({error: error})}
         })
  
+
 
 
 

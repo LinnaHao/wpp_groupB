@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 390px;
+  height: 844px;
+  border: solid;
+  border-color: grey;
+  border-width: 1px;
+  position: relative;
+}
+
+.inter-body {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+.btn {
+  background-color: black; 
+  color: white; 
+  border: none; 
+  width: 312px;
+  height: 48px;
+  border-radius: 90px;
+  font-size: 16px;
+  font-family: inherit;
+  margin-bottom: 10px;
+  position:absolute;
+  line-height: 32px;
+}
+
+/* 修改按钮的鼠标悬停样式 */
+.btn:hover {
+  background-color: #333; /* 悬停时的背景颜色 */
+  color: white; /* 悬停时的文本颜色 */
+}
+
+
+/*homwpage of the login*/
+
+.img_homepage {
+  width: 182px;
+  height: 144px;
+  position: absolute;
+  top: 154px;
+  left: 105px;
+}
+
+.homepage-title{
+  position: absolute;
+  top: 313px;
+  left: 115px;
+  gap: 12px;
+  width: 164px;
+  height: 64px;
+  opacity: 0px;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: center;
+  color:#23262F;
+
+}
+
+.btn-primary {
+  top: 441px;
+  left:37px;
+}
+
+.btn-secondary {
+  top: 505px;
+  left:37px;
+}
+
+
+
+
+.recover-password a  {
+  position:absolute;
+  color: #A2A2A2 ;
+  width: 130px;
+  height: 23px;
+  top: 563px;
+  gap: 12px;
+  transform: translateX(-50%);
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 32px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+
+/*login page*/
+
+
+.login-form {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+  position: relative;
+  top: -100px;
+
+}
+
+.login-title {
+  position: relative;
+  font-weight: bold; 
+  width: 191px;
+  height: 32px;
+  top: 229px;
+  left: 40px;
+  gap: 12px;
+  opacity: 0px;
+
+}
+
+#greeting {
+  font-size: small;
+  color: grey;
+  margin-bottom: 4em;/*当前字体大小的x倍*/
+  margin-top: 0 !important;
+}
+
+
+.form-control {
+  background-color: #ebf0f8 !important; 
+  border: none;
+  width: 311px;
+  height: 46px;
+  font-size: 16px;
+  border-radius: 6px;
+
+
+}
+
+.img_login img {
+  position: relative;
+  width: 390px;
+  height: 218.8px;
+  top: -36px;
+}
+
+
+.forget-password {
+  text-align: right; /* 使链接文本在其父容器内靠右对齐 */
+}
+
+.forget-password a {
+  text-decoration: none; 
+  font-size: 0.8rem; 
+}
+
+.btn-login {
+  position: relative;
+  top:80%;
+}
+
+
+.tips-text {
+  position: fixed;
+  margin-top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  top: 72%;
+ 
+}
