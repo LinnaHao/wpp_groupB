@@ -19,6 +19,27 @@ Content-Type: application/json
 "password":"wrongpassword"
 }
 
+### test passwordreset email exsits 
+POST http://localhost:3001/user/reset
+Content-Type: application/json
+
+{
+"email":"admin@123",
+"newPassword":"newpassword"
+}
+
+### test passwordreset email dosent exsits 
+POST http://localhost:3001/user/reset
+Content-Type: application/json
+
+{
+"email":"admin@456",
+"newPassword":"wrongpassword"
+}
+
+
+
+
 
 
 

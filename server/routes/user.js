@@ -3,30 +3,6 @@ const { query } = require('../helpers/db.js')
 
 const userRouter = express.Router()
 
-
-userRouter.post("/reset",async(req,res) => {
-    app.post('/reset-password', async (req, res) => {
-        const { email, newPassword } = req.body;
-    
-        try {
-            // 查询用户是否存在
-            const userQuery = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
-            const user = userQuery.rows[0];
-    
-            if (!user) {
-                return res.status(404).json({ error: '用户不存在' });
-            }
-    
-            // 更新用户密码
-            await pool.query('UPDATE users SET password = $1 WHERE id = $2', [newPassword, user.id]);
-    
-            return res.status(200).json({ message: '密码重置成功' });
-        } catch (error) {
-            console.error('数据库错误:', error.message);
-            return res.status(500).json({ error: '服务器内部错误' });
-        }
-    })
-})
  
 
 userRouter.post("/login",async(req,res) => {
@@ -48,6 +24,29 @@ userRouter.post("/login",async(req,res) => {
                 res.statusMessage = error
                 res.status(500).json({error: error})}
         })
+
+// Request password reset 
+userRouter.post("/reset", async (req, res) => {
+    try {
+        const email = req.body.email;
+        const newPassword = req.body.newPassword; // Assuming newPassword is provided in the request body
+        // Check if the email exists
+        const userExistsSql = "SELECT * FROM users WHERE email = $1";
+        const userExistsResult = await query(userExistsSql, [email]);
+
+        if (userExistsResult.rowCount === 1) {
+            const updatePasswordQuery = "UPDATE users SET password = $1 WHERE email = $2";
+            await query(updatePasswordQuery, [newPassword, email]);
+            res.status(200).json({ message: 'Password updated successfully' });
+        } else {
+            res.status(404).json({ error: 'User with this email not found' });
+        }
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+          
  
 
 
