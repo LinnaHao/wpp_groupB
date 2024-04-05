@@ -49,8 +49,6 @@ body {
 }
 
 
-/*homwpage of the login*/
-
 .img_homepage {
   width: 182px;
   height: 144px;
@@ -86,9 +84,6 @@ body {
   left:37px;
 }
 
-
-
-
 .recover-password a  {
   position:absolute;
   color: #A2A2A2 ;
@@ -107,80 +102,3 @@ body {
 }
 
 
-/*login page*/
-
-
-.login-form {
-  max-width: 400px;
-  width: 100%;
-  padding: 20px;
-  margin: auto;
-  position: relative;
-  top: -100px;
-
-}
-
-.login-title {
-  position: relative;
-  font-weight: bold; 
-  width: 191px;
-  height: 32px;
-  top: 229px;
-  left: 40px;
-  gap: 12px;
-  opacity: 0px;
-
-}
-
-#greeting {
-  font-size: small;
-  color: grey;
-  margin-bottom: 4em;/*当前字体大小的x倍*/
-  margin-top: 0 !important;
-}
-
-
-.form-control {
-  background-color: #ebf0f8 !important; 
-  border: none;
-  width: 311px;
-  height: 46px;
-  font-size: 16px;
-  border-radius: 6px;
-
-
-}
-
-.img_login img {
-  position: relative;
-  width: 390px;
-  height: 218.8px;
-  top: -36px;
-}
-
-
-.forget-password {
-  text-align: right; /* 使链接文本在其父容器内靠右对齐 */
-}
-
-.forget-password a {
-  text-decoration: none; 
-  font-size: 0.8rem; 
-}
-
-.btn-login {
-  position: relative;
-  top:80%;
-}
-
-
-.tips-text {
-  position: fixed;
-  margin-top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-  top: 72%;
- 
-}
