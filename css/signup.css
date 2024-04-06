@@ -38,8 +38,8 @@ form {
 }
 
 .form-group {
-  margin: 0px auto 30px auto;
-  height: 71px;
+  margin: 0px auto 22px auto;
+  /* height: 71px; */
 }
 
 .form-control {
@@ -51,6 +51,11 @@ form {
 
 .form-control::placeholder {
   color: #7a828a;
+}
+
+#error {
+  color: red;
+  margin-top: 8px;
 }
 
 /* --------- Btn --------- */

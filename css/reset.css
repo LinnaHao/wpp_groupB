@@ -51,6 +51,11 @@ form {
   color: #7a828a;
 }
 
+#error {
+  color: red;
+  margin-top: 8px;
+}
+
 /* --------- Checkbox --------- */
 .form-check {
   font-size: 12px;

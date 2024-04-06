@@ -15,7 +15,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link href="/css/signup.css" rel="stylesheet" />
+    <link href="./css/signup.css" rel="stylesheet" />
 
   </head>
 
@@ -24,7 +24,7 @@
       <div class="box">
         <!--------- IMG --------->
         <div class="img">
-          <img src="/img/demo2.jpeg" class="img-fluid" alt="logo"/>
+          <img src="./img/demo2.jpeg" class="img-fluid" alt="logo"/>
         </div>
 
         <!---------- Heading ---------->
@@ -37,12 +37,12 @@
         <form>
           <div class="form-group">
             <label for="username" class="form-label">Username</label>
-            <input class="form-control" id="username" placeholder="Enter your name" required></input>
+            <input class="form-control" id="username" placeholder="Enter your name" maxlength="20" required></input>
           </div>
 
           <div class="form-group">
             <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="Type your e-mail" pattern=".+@example\.com"
+            <input type="email" class="form-control" id="email" placeholder="Type your e-mail"
             required>
           </div>
 
@@ -60,6 +60,7 @@
             placeholder="Confirm your password"
             minlength="8"
             required>
+            <label for="confirmPassword" class="form-label" id="error"></label>
           </div>
 
         <!---------- Btn ---------->
@@ -71,7 +72,7 @@
 
           <label for="btn" class="form-label">
             Already have an account?
-            <a href="#" class="dark"><strong>Log in</strong></a>
+            <a href="./login.html" class="dark"><strong>Log in</strong></a>
           </label>
         </div>
       </form>
@@ -82,6 +83,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/signup.js"></script>
   </body>
 </html>
 
